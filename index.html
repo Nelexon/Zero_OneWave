@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Audio Waveform">
+  <meta name="description" content="Real-time microphone audio waveform visualizer.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Audio Waveform</title>
+</head>
+<body>
+  <main id="app">
+    <canvas id="waveform" aria-label="Audio waveform visualizer"></canvas>
+
+    <section id="startScreen" class="overlay">
+      <div class="panel">
+        <div class="logo">〰</div>
+        <h1>Audio Waveform</h1>
+        <p id="message">
+          Tap Start and allow microphone access to display the live waveform.
+        </p>
+        <button id="startButton">Start</button>
+      </div>
+    </section>
+
+    <button id="stopButton" class="stop-button" hidden>Stop</button>
+
+    <div id="status" class="status" aria-live="polite">Ready</div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
